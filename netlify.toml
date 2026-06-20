@@ -1,0 +1,13 @@
+# Config de deploy para Netlify (sitio estático, sin backend).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA: cualquier ruta cae en index.html (sin romper los anclas #seccion).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
