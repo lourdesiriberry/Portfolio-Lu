@@ -61,7 +61,7 @@ export default function Navbar() {
           href={whatsappLink(HERO_WHATSAPP_MESSAGE)}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full bg-gradient-to-r from-secondary to-primary px-5 py-2 text-sm font-semibold text-white shadow-md shadow-primary/20 transition-transform hover:scale-105 md:inline-flex"
+          className="hidden rounded-full bg-gradient-to-r from-secondary to-primary px-5 py-2 text-sm font-semibold text-dark shadow-md shadow-primary/20 transition-transform hover:scale-105 md:inline-flex"
         >
           Trabajemos juntos
         </a>
@@ -106,7 +106,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="block rounded-full bg-gradient-to-r from-secondary to-primary px-5 py-3 text-center text-base font-semibold text-white"
+                  className="block rounded-full bg-gradient-to-r from-secondary to-primary px-5 py-3 text-center text-base font-semibold text-dark"
                 >
                   Trabajemos juntos
                 </a>

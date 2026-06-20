@@ -29,7 +29,7 @@ export default function Servicios() {
               }`}
             >
               {service.highlight && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-secondary to-primary px-4 py-1 text-xs font-semibold text-white shadow-lg shadow-primary/30">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-secondary to-primary px-4 py-1 text-xs font-semibold text-dark shadow-lg shadow-primary/30">
                   Más elegido
                 </span>
               )}
@@ -62,7 +62,7 @@ export default function Servicios() {
                 rel="noopener noreferrer"
                 className={`group mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-transform hover:scale-[1.03] ${
                   service.highlight
-                    ? 'bg-gradient-to-r from-secondary to-primary text-white shadow-lg shadow-primary/30'
+                    ? 'bg-gradient-to-r from-secondary to-primary text-dark shadow-lg shadow-primary/30'
                     : 'border border-white/15 bg-white/5 text-light hover:border-white/30'
                 }`}
               >

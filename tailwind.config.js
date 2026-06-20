@@ -5,9 +5,10 @@ export default {
     extend: {
       colors: {
         // Paleta base (CLAUDE.md). Lu puede ajustar acá.
-        primary: '#7C3AED', // violeta vibrante
-        secondary: '#F472B6', // rosa
-        accent: '#FBBF24', // amarillo cálido
+        primary: '#FE688E', // rosa fuerte
+        secondary: '#C4E6FF', // celeste
+        accent: '#FFF48A', // amarillo crema
+        blush: '#FECFD9', // rosa claro
         dark: '#0F0F1A',
         light: '#FAFAFF',
       },

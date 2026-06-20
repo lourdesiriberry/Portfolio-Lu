@@ -78,7 +78,7 @@ export default function Hero() {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-secondary to-primary px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/30"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-secondary to-primary px-7 py-3.5 text-base font-semibold text-dark shadow-lg shadow-primary/30"
           >
             Trabajemos juntos
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

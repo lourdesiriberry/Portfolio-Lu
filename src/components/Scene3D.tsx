@@ -30,11 +30,11 @@ type IconDef = {
 
 // Íconos de IG y TikTok repartidos alrededor del texto.
 const ICONS: IconDef[] = [
-  { path: IG_PATH, color: '#F472B6', scale: 1.7, pos: [-2.7, 0.6, -1], float: { speed: 1.1, rot: 0.4, floatI: 1 }, spin: 0.25 },
+  { path: IG_PATH, color: '#FE688E', scale: 1.7, pos: [-2.7, 0.6, -1], float: { speed: 1.1, rot: 0.4, floatI: 1 }, spin: 0.25 },
   { path: TT_PATH, color: '#FAFAFF', scale: 1.6, pos: [2.8, -0.5, -0.4], float: { speed: 1.3, rot: 0.4, floatI: 1.1 }, spin: -0.3 },
-  { path: IG_PATH, color: '#7C3AED', scale: 1.0, pos: [2.4, 1.7, -1.2], float: { speed: 1.6, rot: 0.5, floatI: 1.2 }, spin: 0.35 },
-  { path: TT_PATH, color: '#F472B6', scale: 1.0, pos: [-2.3, -1.5, -0.8], float: { speed: 1.5, rot: 0.5, floatI: 1.1 }, spin: 0.3 },
-  { path: IG_PATH, color: '#FBBF24', scale: 0.85, pos: [-3.1, 1.6, -1.4], float: { speed: 1.4, rot: 0.5, floatI: 1 }, spin: -0.28 },
+  { path: IG_PATH, color: '#C4E6FF', scale: 1.0, pos: [2.4, 1.7, -1.2], float: { speed: 1.6, rot: 0.5, floatI: 1.2 }, spin: 0.35 },
+  { path: TT_PATH, color: '#FECFD9', scale: 1.0, pos: [-2.3, -1.5, -0.8], float: { speed: 1.5, rot: 0.5, floatI: 1.1 }, spin: 0.3 },
+  { path: IG_PATH, color: '#FFF48A', scale: 0.85, pos: [-3.1, 1.6, -1.4], float: { speed: 1.4, rot: 0.5, floatI: 1 }, spin: -0.28 },
 ]
 
 /** Convierte un path SVG (viewBox 24) en una geometría 3D centrada y normalizada (~1 unidad). */
@@ -124,8 +124,8 @@ export default function Scene3D() {
     >
       <ambientLight intensity={1.3} />
       <directionalLight position={[5, 5, 5]} intensity={2.2} />
-      <pointLight position={[-6, 2, 4]} color="#F472B6" intensity={60} />
-      <pointLight position={[6, -2, 2]} color="#7C3AED" intensity={60} />
+      <pointLight position={[-6, 2, 4]} color="#FE688E" intensity={60} />
+      <pointLight position={[6, -2, 2]} color="#C4E6FF" intensity={60} />
       <Icons />
     </Canvas>
   )

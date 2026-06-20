@@ -41,7 +41,7 @@ export default function Contacto() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-secondary to-primary px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/30"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-secondary to-primary px-7 py-3.5 text-base font-semibold text-dark shadow-lg shadow-primary/30"
             >
               <MessageCircle className="h-5 w-5" />
               Escribime por WhatsApp
