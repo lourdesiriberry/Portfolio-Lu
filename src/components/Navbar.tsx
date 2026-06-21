@@ -34,7 +34,7 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || open
-          ? 'border-b border-white/10 bg-dark/80 backdrop-blur-md'
+          ? 'border-b border-dark/10 bg-light/80 backdrop-blur-md'
           : 'border-b border-transparent'
       }`}
     >
@@ -49,7 +49,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-medium text-light/70 transition-colors hover:text-light"
+                className="text-sm font-medium text-dark/70 transition-colors hover:text-dark"
               >
                 {l.label}
               </a>
@@ -86,7 +86,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="overflow-hidden border-t border-white/10 bg-dark/95 backdrop-blur-md md:hidden"
+            className="overflow-hidden border-t border-dark/10 bg-light/95 backdrop-blur-md md:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
               {links.map((l) => (
@@ -94,7 +94,7 @@ export default function Navbar() {
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-lg px-2 py-3 text-base font-medium text-light/80 transition-colors hover:bg-white/5 hover:text-light"
+                    className="block rounded-lg px-2 py-3 text-base font-medium text-dark/80 transition-colors hover:bg-dark/5 hover:text-dark"
                   >
                     {l.label}
                   </a>

@@ -6,9 +6,9 @@ export default function Numeros() {
   return (
     <section id="numeros" className="scroll-mt-20 px-6 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-primary/15 via-dark to-dark px-6 py-14 sm:px-12">
+        <div className="relative overflow-hidden rounded-3xl border border-dark/10 bg-gradient-to-br from-secondary/40 via-blush/25 to-accent/35 px-6 py-14 shadow-sm shadow-dark/[0.04] sm:px-12">
           {/* glow decorativo */}
-          <div className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-secondary/20 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
 
           <div className="relative grid grid-cols-2 gap-y-10 gap-x-6 text-center lg:grid-cols-4">
             {stats.map((stat, i) => (
@@ -22,7 +22,7 @@ export default function Numeros() {
                 <div className="font-display text-4xl font-bold tracking-tight text-gradient sm:text-5xl">
                   <Counter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
-                <p className="mt-2 text-sm text-light/60 sm:text-base">{stat.label}</p>
+                <p className="mt-2 text-sm font-medium text-dark/70 sm:text-base">{stat.label}</p>
               </motion.div>
             ))}
           </div>

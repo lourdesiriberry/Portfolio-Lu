@@ -23,16 +23,16 @@ export default function QueHago() {
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }}
                 whileHover={{ y: -6 }}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-7 backdrop-blur-sm transition-colors hover:border-white/20"
+                className="group relative overflow-hidden rounded-2xl border border-dark/[0.08] bg-white/80 p-7 shadow-sm shadow-dark/[0.04] backdrop-blur-sm transition-all hover:border-primary/30 hover:shadow-md"
               >
                 {/* glow al hover */}
                 <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/20 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
 
-                <div className="inline-flex rounded-xl bg-gradient-to-br from-secondary/20 to-primary/20 p-3 ring-1 ring-white/10">
-                  <Icon className="h-6 w-6 text-secondary" />
+                <div className="inline-flex rounded-xl bg-gradient-to-br from-secondary/50 to-primary/30 p-3 ring-1 ring-dark/[0.06]">
+                  <Icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold">{pillar.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-light/60">{pillar.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-dark/65">{pillar.description}</p>
               </motion.article>
             )
           })}

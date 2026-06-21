@@ -44,9 +44,9 @@ export default function Hero() {
         {/* Eyebrow */}
         <motion.div
           variants={item}
-          className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm font-medium text-light/80 backdrop-blur-sm"
+          className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-dark/10 bg-white/70 px-4 py-1.5 text-sm font-medium text-dark/70 shadow-sm backdrop-blur-sm"
         >
-          <Sparkles className="h-4 w-4 text-accent" />
+          <Sparkles className="h-4 w-4 text-primary" />
           Community Manager &amp; creadora de contenido
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function Hero() {
         {/* Tagline */}
         <motion.p
           variants={item}
-          className="mx-auto mt-6 max-w-xl text-balance text-lg text-light/70 sm:text-xl"
+          className="mx-auto mt-6 max-w-xl text-balance text-lg text-dark/70 sm:text-xl"
         >
           {TAGLINE}
         </motion.p>
@@ -86,7 +86,7 @@ export default function Hero() {
 
           <a
             href="#trabajo"
-            className="text-sm font-medium text-light/60 underline-offset-4 transition-colors hover:text-light hover:underline"
+            className="text-sm font-medium text-dark/60 underline-offset-4 transition-colors hover:text-dark hover:underline"
           >
             Mirá mi trabajo
           </a>
@@ -100,11 +100,11 @@ export default function Hero() {
         transition={{ delay: 1.4, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <div className="flex h-9 w-5 items-start justify-center rounded-full border border-white/20 p-1.5">
+        <div className="flex h-9 w-5 items-start justify-center rounded-full border border-dark/20 p-1.5">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-            className="h-1.5 w-1 rounded-full bg-light/60"
+            className="h-1.5 w-1 rounded-full bg-dark/40"
           />
         </div>
       </motion.div>

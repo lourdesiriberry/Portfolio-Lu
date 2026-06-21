@@ -9,14 +9,22 @@
     scroll-behavior: smooth;
   }
 
+  /* Tema claro con tintes: base clara + lavados pastel en las esquinas. */
   body {
-    @apply bg-dark text-light font-sans antialiased;
+    @apply text-dark font-sans antialiased;
+    background-color: #fffbfd;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(196, 230, 255, 0.55) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(254, 207, 217, 0.5) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(255, 244, 138, 0.4) 0px, transparent 55%),
+      radial-gradient(at 0% 100%, rgba(254, 104, 142, 0.28) 0px, transparent 50%);
+    background-attachment: fixed;
   }
 }
 
 @layer utilities {
-  /* Texto con gradiente de marca */
+  /* Texto con gradiente de marca (saturado para leerse sobre claro). */
   .text-gradient {
-    @apply bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#2BA8E0] via-primary to-[#F4357A] bg-clip-text text-transparent;
   }
 }

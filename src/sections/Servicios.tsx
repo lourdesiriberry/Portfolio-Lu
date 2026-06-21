@@ -24,8 +24,8 @@ export default function Servicios() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }}
               className={`relative flex flex-col rounded-2xl border p-7 backdrop-blur-sm ${
                 service.highlight
-                  ? 'border-transparent bg-gradient-to-b from-primary/20 to-white/[0.03] ring-2 ring-primary/50 lg:scale-[1.03]'
-                  : 'border-white/10 bg-white/[0.03]'
+                  ? 'border-transparent bg-gradient-to-b from-primary/15 to-white/80 ring-2 ring-primary/40 shadow-lg shadow-primary/10 lg:scale-[1.03]'
+                  : 'border-dark/[0.08] bg-white/80 shadow-sm shadow-dark/[0.04]'
               }`}
             >
               {service.highlight && (
@@ -35,22 +35,22 @@ export default function Servicios() {
               )}
 
               <h3 className="font-display text-2xl font-bold">{service.name}</h3>
-              <p className="mt-2 text-sm text-light/60">{service.tagline}</p>
+              <p className="mt-2 text-sm text-dark/60">{service.tagline}</p>
 
               {/* Precio (informativo — no se paga online, el CTA abre WhatsApp) */}
-              <div className="mt-6 flex items-end gap-2 border-b border-white/10 pb-6">
-                <span className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+              <div className="mt-6 flex items-end gap-2 border-b border-dark/10 pb-6">
+                <span className="font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl">
                   {service.price}
                 </span>
                 {service.priceNote && (
-                  <span className="pb-1 text-sm text-light/50">{service.priceNote}</span>
+                  <span className="pb-1 text-sm text-dark/55">{service.priceNote}</span>
                 )}
               </div>
 
               <ul className="mt-6 flex-1 space-y-3">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm text-light/80">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
+                  <li key={feature} className="flex items-start gap-3 text-sm text-dark/80">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -63,7 +63,7 @@ export default function Servicios() {
                 className={`group mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-transform hover:scale-[1.03] ${
                   service.highlight
                     ? 'bg-gradient-to-r from-secondary to-primary text-dark shadow-lg shadow-primary/30'
-                    : 'border border-white/15 bg-white/5 text-light hover:border-white/30'
+                    : 'border border-dark/15 bg-white/70 text-dark hover:border-primary/40'
                 }`}
               >
                 Consultar por WhatsApp

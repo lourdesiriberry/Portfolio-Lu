@@ -9,8 +9,8 @@ export default {
         secondary: '#C4E6FF', // celeste
         accent: '#FFF48A', // amarillo crema
         blush: '#FECFD9', // rosa claro
-        dark: '#0F0F1A',
-        light: '#FAFAFF',
+        dark: '#1A1320', // texto/oscuro (violeta muy oscuro, cálido)
+        light: '#FFFBFD', // base clara cálida
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
