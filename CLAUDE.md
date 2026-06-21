@@ -17,9 +17,10 @@ NO la paleta ni el look. Esto tiene que verse más moderno y propio.
 - **Vite + React + TypeScript**
 - **Tailwind CSS** para estilos (toda la paleta vive en `tailwind.config`)
 - **Motion** (`motion/react`, ex Framer Motion) para animaciones de scroll, entrada y hover
-- **Spline** (`@splinetool/react-spline`) para la escena 3D del hero (embebible, liviana)
+- **3D del hero: React Three Fiber / Three.js** (`@react-three/fiber`, `@react-three/drei`, `three`).
+  NO se usó Spline al final (los paquetes de Spline quedaron instalados pero SIN USO).
 - Iconos: `lucide-react`
-- Deploy pensado para **Vercel** o **Netlify** (sitio estático, sin backend)
+- Deploy en **Netlify** (sitio estático, sin backend). Ver "Estado actual" al final.
 
 ## Reglas de arquitectura
 - **Sin backend, sin base de datos.** Es un sitio estático. Todo el contenido vive en data/archivos locales.
@@ -32,22 +33,23 @@ NO la paleta ni el look. Esto tiene que verse más moderno y propio.
 **Dirección elegida: EQUILIBRADO / ELEGANTE.** Moderno y con impacto, pero que respire y no abrume.
 - **Moderno, visual, "entra por los ojos".** Mucho cuidado en tipografía, espaciado y micro-interacciones.
 - Animaciones de scroll suaves (fade + slide al aparecer secciones), hover states con vida.
-- **3D sutil SOLO en el hero** (escena Spline liviana, algo flotando suave que no marea). El resto: efectos 2D refinados (gradientes animados, glassmorphism sutil, parallax liviano).
+- **3D sutil SOLO en el hero** (logos de IG/TikTok extruidos a 3D flotando suave, con React Three Fiber). El resto: efectos 2D refinados (gradientes animados, glassmorphism sutil, parallax liviano).
 - NADA de 3D pesado ni movimiento que canse o maree. Elegante > recargado.
 - Rendimiento es prioridad: nada que trabe en mobile. Lazy-load del 3D, imágenes optimizadas.
 - Dark mode opcional pero no obligatorio en v1.
 
-### Paleta (PLACEHOLDER — ajustar a gusto de Lu)
-Definir en `tailwind.config`. Arrancamos con una propuesta moderna y cálida,
-distinta a la de Rayo. Lu elige los colores finales.
+### Paleta FINAL (colores de marca de Lu) — en `tailwind.config`
+Sacados de la placa de marca de Lu. Tema **claro con tintes** (fondo claro + lavados pastel).
 ```
-primary:   #7C3AED  (violeta vibrante)
-secondary: #F472B6  (rosa)
-accent:    #FBBF24  (amarillo cálido)
-dark:      #0F0F1A
-light:     #FAFAFF
+primary:   #FE688E  (rosa fuerte)
+secondary: #C4E6FF  (celeste)
+accent:    #FFF48A  (amarillo crema)
+blush:     #FECFD9  (rosa claro)
+dark:      #1A1320  (texto oscuro cálido)
+light:     #FFFBFD  (base clara cálida)
 ```
-> Si Lu ya tiene colores de marca, reemplazar TODO esto por los de ella.
+El fondo claro con tintes se arma en `src/index.css` (radial-gradients pastel).
+El gradiente de marca (`.text-gradient`) usa azul→rosa saturado para leerse sobre claro.
 
 ## Secciones (orden propuesto)
 1. **Hero** — nombre "Redes con Lu", tagline potente, CTA ("Trabajemos juntos"), escena 3D Spline de fondo.
@@ -84,3 +86,29 @@ En su lugar:
 ## Flujo de trabajo
 - Cambios incrementales, sección por sección. Mostrar resultado y ajustar.
 - Después de cada sección, correr el dev server y revisar en mobile (responsive).
+
+## Estado actual del proyecto (actualizado 2026-06-20)
+**Sitio COMPLETO y DESPLEGADO.** Todas las secciones armadas: Hero (logos 3D), Qué hago,
+Números (contador animado), Mi trabajo, Servicios (con precios visibles), Contacto. + Navbar y Footer.
+
+- **Online**: https://redesconlu.netlify.app — deploy automático en cada `push` a `main`.
+- **Repo**: github.com/lourdesiriberry/Portfolio-Lu
+- **Tema visual**: **CLARO con tintes pastel**.
+  - Para volver a OSCURO o armar un toggle **dark/light**: el commit **`a33f570`** pasó de
+    oscuro → claro. Su **padre `8cfd2fe`** es el estado OSCURO con la paleta de Lu (referencia
+    de cómo se veía en oscuro). `git diff 8cfd2fe a33f570` muestra EXACTO el cambio dark→light
+    (clases de color en componentes + `index.css` + `tailwind.config.js`).
+- **WhatsApp**: número real de Lu ya cargado en `src/data/contact.ts`.
+- **Preview al compartir (OG)**: `public/og.jpg` (1200×630, placa de marca de Lu). Meta tags en
+  `index.html` apuntan a `https://redesconlu.netlify.app/og.jpg` (si cambia el dominio, actualizar ahí).
+  Tras cambiar la OG, WhatsApp/FB cachean: refrescar con el debugger de Facebook.
+
+### Entorno de desarrollo (Windows) — OJO
+- `node` **NO está en el PATH**. Está en `C:\Program Files\nodejs`. Agregarlo al PATH de la
+  sesión (`$env:Path = "C:\Program Files\nodejs;" + $env:Path`) o usar ruta completa.
+- PowerShell bloquea `npm.ps1` (execution policy). Usar **`npm.cmd run dev`** (con `.cmd`)
+  o habilitar una vez: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`.
+
+### Pendientes / a confirmar
+- Links reales de las cuentas en `src/data/works.ts` (cargados con lo que pasó Lu; revisar que abran).
+- Stat "Vistas generadas" puesto conservador (20M+) en `src/data/stats.ts` — se puede subir.
