@@ -79,7 +79,7 @@ export default function MiTrabajo() {
         <SectionHeading
           eyebrow="Mi trabajo"
           title="Cuentas que gestiono"
-          subtitle="Comunidades reales que crecen con estrategia y contenido. Tocá cada una para ver el perfil."
+          subtitle="Marcas y proyectos que acompaño día a día con estrategia, creatividad y contenido pensado para conectar. Tocá para conocer su perfil."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">

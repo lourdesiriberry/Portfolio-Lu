@@ -1,8 +1,9 @@
 import { motion } from 'motion/react'
 import { Check, ArrowRight } from 'lucide-react'
-import { services } from '../data/services'
+import { services, servicesIntro, includedInAll } from '../data/services'
 import { whatsappLink } from '../data/contact'
 import SectionHeading from '../components/SectionHeading'
+import Reveal from '../components/Reveal'
 
 export default function Servicios() {
   return (
@@ -10,9 +11,30 @@ export default function Servicios() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Servicios"
-          title="Elegí cómo trabajamos"
-          subtitle="Sin pagos online ni vueltas: elegís el pack y arrancamos por WhatsApp. Todo se adapta a vos."
+          title="Elegí cómo querés hacer crecer tus redes"
         />
+
+        {/* Intro de la sección */}
+        <Reveal className="mx-auto mt-6 max-w-2xl space-y-4 text-center text-base text-dark/65">
+          {servicesIntro.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
+        </Reveal>
+
+        {/* Lo que incluyen todos los packs */}
+        <Reveal className="mx-auto mt-10 max-w-3xl rounded-2xl border border-dark/[0.08] bg-white/80 p-6 shadow-sm shadow-dark/[0.04] sm:p-8">
+          <p className="text-center font-display text-sm font-bold uppercase tracking-[0.15em] text-primary">
+            Todos los packs incluyen
+          </p>
+          <ul className="mx-auto mt-5 grid max-w-xl gap-x-6 gap-y-3 sm:grid-cols-2">
+            {includedInAll.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-sm text-dark/80">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
 
         <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
           {services.map((service, i) => (
@@ -34,11 +56,13 @@ export default function Servicios() {
                 </span>
               )}
 
-              <h3 className="font-display text-2xl font-bold">{service.name}</h3>
-              <p className="mt-2 text-sm text-dark/60">{service.tagline}</p>
+              <h3 className="text-center font-display text-3xl font-extrabold uppercase tracking-tight sm:text-4xl">
+                {service.name}
+              </h3>
+              <p className="mt-2 text-center text-sm text-dark/60">{service.tagline}</p>
 
               {/* Precio (informativo — no se paga online, el CTA abre WhatsApp) */}
-              <div className="mt-6 flex items-end gap-2 border-b border-dark/10 pb-6">
+              <div className="mt-6 flex items-end justify-center gap-2 border-b border-dark/10 pb-6">
                 <span className="font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl">
                   {service.price}
                 </span>

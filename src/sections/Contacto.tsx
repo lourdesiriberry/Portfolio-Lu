@@ -23,13 +23,13 @@ export default function Contacto() {
         <Reveal className="overflow-hidden rounded-3xl border border-dark/10 bg-gradient-to-br from-secondary/35 via-blush/25 to-primary/20 p-8 shadow-sm shadow-dark/[0.04] sm:p-12">
           <div className="text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Contacto
+              Hablemos
             </span>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              ¿Arrancamos?
+            <h2 className="mt-3 font-display text-3xl font-extrabold uppercase leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              Tu negocio ya tiene todo para <span className="text-gradient">crecer</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-balance text-base text-dark/65 sm:text-lg">
-              Contame qué necesitás y lo charlamos por WhatsApp. Sin compromiso, te respondo yo.
+            <p className="mx-auto mt-4 max-w-lg text-balance text-base text-dark/70 sm:text-lg">
+              Ahora necesitás una estrategia que lo impulse. Escribime y empecemos.
             </p>
           </div>
 

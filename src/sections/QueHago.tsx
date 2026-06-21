@@ -7,9 +7,9 @@ export default function QueHago() {
     <section id="que-hago" className="scroll-mt-20 px-6 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Qué hago"
-          title="Tres formas de potenciar tus redes"
-          subtitle="Desde el plan hasta el día a día. Elegí lo que necesitás o dejá todo en mis manos."
+          eyebrow="¿Cómo puedo ayudarte?"
+          title="Tres maneras de potenciar tus redes"
+          subtitle="Desde la estrategia hasta la gestión diaria. Elegí el servicio que necesitás o dejá todo en mis manos."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -28,11 +28,12 @@ export default function QueHago() {
                 {/* glow al hover */}
                 <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/20 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
 
-                <div className="inline-flex rounded-xl bg-gradient-to-br from-secondary/50 to-primary/30 p-3 ring-1 ring-dark/[0.06]">
-                  <Icon className="h-6 w-6 text-primary" />
+                <div className="inline-flex rounded-2xl bg-gradient-to-br from-primary to-[#2BA8E0] p-3.5 shadow-lg shadow-primary/25">
+                  <Icon className="h-7 w-7 text-white" strokeWidth={1.5} />
                 </div>
-                <h3 className="mt-5 font-display text-xl font-semibold">{pillar.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-dark/65">{pillar.description}</p>
+                <h3 className="mt-5 font-display text-2xl font-bold tracking-tight">{pillar.title}</h3>
+                <p className="mt-2 font-display text-base font-bold text-dark/90">{pillar.subtitle}</p>
+                <p className="mt-2 text-sm leading-relaxed text-dark/65">{pillar.description}</p>
               </motion.article>
             )
           })}

@@ -3,15 +3,6 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 import HeroBackground from '../components/HeroBackground'
 import { whatsappLink, HERO_WHATSAPP_MESSAGE } from '../data/contact'
 
-// ────────────────────────────────────────────────────────────
-// COPY DEL TAGLINE — Lu elige una de las 3 (las otras quedan de
-// referencia). Cambiá esta constante por la opción elegida.
-// 1) 'Convierto tus redes en una comunidad que te elige.'
-// 2) 'Gestiono, creo y hago crecer las redes que importan.'
-// 3) 'Estrategia, contenido y gestión. Tus redes, con onda.'
-const TAGLINE = 'Convierto tus redes en una comunidad que te elige.'
-// ────────────────────────────────────────────────────────────
-
 // Animación de entrada: fade + slide suave, escalonado.
 const container = {
   hidden: {},
@@ -53,17 +44,18 @@ export default function Hero() {
         {/* Nombre / título principal */}
         <motion.h1
           variants={item}
-          className="font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl"
+          className="font-display text-3xl font-medium uppercase tracking-[0.2em] sm:text-5xl"
         >
-          Redes <span className="text-gradient">con Lu</span>
+          Redes con Lu
         </motion.h1>
 
-        {/* Tagline */}
+        {/* Tagline — se resalta solo el resultado */}
         <motion.p
           variants={item}
-          className="mx-auto mt-6 max-w-xl text-balance text-lg text-dark/70 sm:text-xl"
+          className="mx-auto mt-6 max-w-2xl text-balance text-lg text-dark/70 sm:text-xl"
         >
-          {TAGLINE}
+          Estrategia, contenido y gestión para que tu negocio{' '}
+          <span className="font-semibold text-gradient">se vea, conecte y crezca</span>.
         </motion.p>
 
         {/* CTA principal → WhatsApp */}

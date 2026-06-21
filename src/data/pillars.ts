@@ -1,29 +1,33 @@
-import { Target, PenTool, MessagesSquare, type LucideIcon } from 'lucide-react'
+import { Waypoints, SquarePlay, LayoutDashboard, type LucideIcon } from 'lucide-react'
 
 export type Pillar = {
   icon: LucideIcon
   title: string
+  subtitle: string
   description: string
 }
 
-// "Qué hago" — 3 pilares. Lu edita títulos y descripciones acá.
+// "¿Cómo puedo ayudarte?" — 3 pilares. Lu edita títulos, subtítulos y textos acá.
 export const pillars: Pillar[] = [
   {
-    icon: Target,
+    icon: Waypoints,
     title: 'Estrategia',
+    subtitle: 'Pensá tus redes con intención',
     description:
-      'Pienso tus redes con cabeza: a quién le hablás, qué te diferencia y un plan de contenido que tenga sentido. Nada al azar.',
+      'Defino a quién le hablás, qué te diferencia y creo un plan de contenido alineado con tus objetivos.',
   },
   {
-    icon: PenTool,
+    icon: SquarePlay,
     title: 'Contenido',
+    subtitle: 'Creo contenido que frena el scroll',
     description:
-      'Creo posteos, reels y videos que frenan el scroll. Ideas, guion, edición y copy con tu voz, listos para publicar.',
+      'Posteos, reels y videos pensados para conectar con tu audiencia. Me ocupo de las ideas, los guiones, la edición y los textos, siempre respetando la voz de tu marca.',
   },
   {
-    icon: MessagesSquare,
+    icon: LayoutDashboard,
     title: 'Gestión',
+    subtitle: 'Me encargo del día a día de tus redes',
     description:
-      'Me ocupo del día a día: publicación, comunidad, respuestas y seguimiento. Vos seguí con lo tuyo, de las redes me encargo yo.',
+      'Publicaciones, interacción con la comunidad, respuestas y seguimiento constante. Vos enfocate en tu negocio, de las redes me ocupo yo.',
   },
 ]

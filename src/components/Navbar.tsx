@@ -4,11 +4,11 @@ import { Menu, X } from 'lucide-react'
 import { whatsappLink, HERO_WHATSAPP_MESSAGE } from '../data/contact'
 
 const links = [
-  { href: '#que-hago', label: 'Qué hago' },
-  { href: '#numeros', label: 'Números' },
-  { href: '#trabajo', label: 'Mi trabajo' },
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '#que-hago', label: 'Cómo te ayudo' },
+  { href: '#numeros', label: 'Resultados' },
+  { href: '#trabajo', label: 'Proyectos' },
+  { href: '#servicios', label: 'Planes' },
+  { href: '#contacto', label: 'Hablemos' },
 ]
 
 export default function Navbar() {

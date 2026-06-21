@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 import Hero from './sections/Hero'
 import QueHago from './sections/QueHago'
 import Numeros from './sections/Numeros'
@@ -20,6 +21,7 @@ function App() {
         <Contacto />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </>
   )
 }
