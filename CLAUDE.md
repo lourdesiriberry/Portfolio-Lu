@@ -91,7 +91,7 @@ En su lugar:
 **Sitio COMPLETO y DESPLEGADO.** Todas las secciones armadas: Hero (logos 3D), Qué hago,
 Números (contador animado), Mi trabajo, Servicios (con precios visibles), Contacto. + Navbar y Footer.
 
-- **Online**: https://redesconlu.netlify.app — deploy automático en cada `push` a `main`.
+- **Online**: **https://redesconlu.com.ar** (dominio propio, conectado a Netlify) — también responde `https://redesconlu.netlify.app`. Deploy automático en cada `push` a `main`.
 - **Repo**: github.com/lourdesiriberry/Portfolio-Lu
 - **Tema visual**: **CLARO con tintes pastel**.
   - Para volver a OSCURO o armar un toggle **dark/light**: el commit **`a33f570`** pasó de
@@ -100,8 +100,9 @@ Números (contador animado), Mi trabajo, Servicios (con precios visibles), Conta
     (clases de color en componentes + `index.css` + `tailwind.config.js`).
 - **WhatsApp**: número real de Lu ya cargado en `src/data/contact.ts`.
 - **Preview al compartir (OG)**: `public/og.jpg` (1200×630, placa de marca de Lu). Meta tags en
-  `index.html` apuntan a `https://redesconlu.netlify.app/og.jpg` (si cambia el dominio, actualizar ahí).
-  Tras cambiar la OG, WhatsApp/FB cachean: refrescar con el debugger de Facebook.
+  `index.html` apuntan a `https://redesconlu.com.ar/og.jpg` (mismo dominio que la página; si cambia
+  el dominio, actualizar ahí). Tras cambiar la OG, WhatsApp/FB cachean: refrescar con el debugger
+  de Facebook (https://developers.facebook.com/tools/debug/ → "Scrape Again").
 
 ### Entorno de desarrollo (Windows) — OJO
 - `node` **NO está en el PATH**. Está en `C:\Program Files\nodejs`. Agregarlo al PATH de la
