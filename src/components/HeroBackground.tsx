@@ -1,23 +1,17 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
 
-// 3D real (Three.js / React Three Fiber). Es pesado (~240KB + costo de CPU/GPU),
-// así que lo cargamos SOLO en pantallas grandes (desktop). En mobile se muestran
-// únicamente los glows de color: la página abre mucho más rápido en el celu y
-// ni siquiera descarga Three.js.
+// 3D real (Three.js / React Three Fiber). Se carga en TODOS los dispositivos
+// (también en mobile) pero DIFERIDO: primero se pinta el contenido — la página
+// abre rápido — y recién después aparecen los íconos 3D en movimiento.
 const Scene3D = lazy(() => import('./Scene3D'))
 
-const DESKTOP_QUERY = '(min-width: 1024px)'
-
 export default function HeroBackground() {
-  const [show3D, setShow3D] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia(DESKTOP_QUERY).matches,
-  )
+  const [show3D, setShow3D] = useState(false)
 
   useEffect(() => {
-    const mq = window.matchMedia(DESKTOP_QUERY)
-    const update = () => setShow3D(mq.matches)
-    mq.addEventListener('change', update)
-    return () => mq.removeEventListener('change', update)
+    // Esperamos al primer pintado para no competir con la carga inicial.
+    const id = window.setTimeout(() => setShow3D(true), 600)
+    return () => window.clearTimeout(id)
   }, [])
 
   return (
@@ -33,7 +27,7 @@ export default function HeroBackground() {
         style={{ animationDelay: '-4s' }}
       />
 
-      {/* 2 · 3D — solo en desktop (en mobile no se carga, para que abra rápido) */}
+      {/* 2 · 3D diferido (también en mobile: aparece a los ~0.6s en movimiento) */}
       {show3D && (
         <Suspense fallback={null}>
           <Scene3D />
