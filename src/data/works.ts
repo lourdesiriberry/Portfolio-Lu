@@ -47,4 +47,12 @@ export const works: Work[] = [
     url: 'https://www.instagram.com/stmichaelscollegeadrogue',
     metrics: [{ platform: 'Instagram', count: '3.5K' }],
   },
+  {
+    name: 'Ecot Siderúrgicos',
+    handle: 'ecotsiderurgicos',
+    description:
+      'Todo para la construcción: chapas, hierros y caños. Comunicación clara y profesional para llegar a más clientes.',
+    url: 'https://www.instagram.com/ecotsiderurgicos/',
+    metrics: [{ platform: 'Instagram', count: '1.8K' }],
+  },
 ]

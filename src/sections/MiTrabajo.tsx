@@ -28,7 +28,7 @@ function WorkCard({ work, index }: { work: Work; index: number }) {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
       whileHover={{ y: -6 }}
       className={`group relative flex flex-col overflow-hidden rounded-2xl border border-dark/[0.08] bg-white/80 p-6 shadow-sm shadow-dark/[0.04] backdrop-blur-sm transition-all hover:border-primary/30 hover:shadow-md ${
-        work.featured ? 'sm:col-span-2' : ''
+        work.featured ? 'sm:col-span-2 lg:col-span-3' : ''
       }`}
     >
       <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-secondary/20 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
@@ -82,7 +82,7 @@ export default function MiTrabajo() {
           subtitle="Marcas y proyectos que acompaño día a día con estrategia, creatividad y contenido pensado para conectar. Tocá para conocer su perfil."
         />
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {works.map((work, i) => (
             <WorkCard key={work.handle} work={work} index={i} />
           ))}
