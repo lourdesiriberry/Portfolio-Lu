@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import HeroBackground from '../components/HeroBackground'
+import HeroIcons from '../components/HeroIcons'
 import { whatsappLink, HERO_WHATSAPP_MESSAGE } from '../data/contact'
 
 // Animación de entrada: fade + slide suave, escalonado.
@@ -39,6 +40,11 @@ export default function Hero() {
         >
           <Sparkles className="h-4 w-4 text-primary" />
           Community Manager &amp; creadora de contenido
+        </motion.div>
+
+        {/* Íconos 3D chiquitos (IG, TikTok, crecimiento) cerca del título */}
+        <motion.div variants={item}>
+          <HeroIcons />
         </motion.div>
 
         {/* Nombre / título principal */}
