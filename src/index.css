@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+/* Fuentes (Sora + Inter) cargadas desde index.html con preconnect, para mejor performance en mobile. */
 
 @tailwind base;
 @tailwind components;
