@@ -27,7 +27,7 @@ function WorkCard({ work, index }: { work: Work; index: number }) {
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
       whileHover={{ y: -6 }}
-      className={`group relative flex flex-col overflow-hidden rounded-2xl border border-dark/[0.08] bg-white/80 p-6 shadow-sm shadow-dark/[0.04] backdrop-blur-sm transition-all hover:border-primary/30 hover:shadow-md ${
+      className={`group relative flex flex-col overflow-hidden rounded-2xl border border-dark/[0.08] bg-white/80 p-6 shadow-sm shadow-dark/[0.04] transition-all hover:border-primary/30 hover:shadow-md ${
         work.featured ? 'sm:col-span-2 lg:col-span-3' : ''
       }`}
     >

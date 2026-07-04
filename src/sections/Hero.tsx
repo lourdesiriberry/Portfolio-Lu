@@ -36,7 +36,7 @@ export default function Hero() {
         {/* Eyebrow */}
         <motion.div
           variants={item}
-          className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-dark/10 bg-white/70 px-4 py-1.5 text-sm font-medium text-dark/70 shadow-sm backdrop-blur-sm"
+          className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-dark/10 bg-white/70 px-4 py-1.5 text-sm font-medium text-dark/70 shadow-sm"
         >
           <Sparkles className="h-4 w-4 text-primary" />
           Community Manager &amp; creadora de contenido

@@ -23,7 +23,7 @@ export default function QueHago() {
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }}
                 whileHover={{ y: -6 }}
-                className="group relative overflow-hidden rounded-2xl border border-dark/[0.08] bg-white/80 p-7 shadow-sm shadow-dark/[0.04] backdrop-blur-sm transition-all hover:border-primary/30 hover:shadow-md"
+                className="group relative overflow-hidden rounded-2xl border border-dark/[0.08] bg-white/80 p-7 shadow-sm shadow-dark/[0.04] transition-all hover:border-primary/30 hover:shadow-md"
               >
                 {/* glow al hover */}
                 <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/20 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />

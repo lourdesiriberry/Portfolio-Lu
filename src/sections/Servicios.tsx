@@ -44,7 +44,7 @@ export default function Servicios() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }}
-              className={`relative flex flex-col rounded-2xl border p-7 backdrop-blur-sm ${
+              className={`relative flex flex-col rounded-2xl border p-7 ${
                 service.highlight
                   ? 'border-transparent bg-gradient-to-b from-primary/15 to-white/80 ring-2 ring-primary/40 shadow-lg shadow-primary/10 lg:scale-[1.03]'
                   : 'border-dark/[0.08] bg-white/80 shadow-sm shadow-dark/[0.04]'

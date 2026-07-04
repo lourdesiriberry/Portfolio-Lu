@@ -18,8 +18,6 @@ export default function FloatingWhatsApp() {
       whileTap={{ scale: 0.92 }}
       className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/40"
     >
-      {/* halo sutil para llamar la atención */}
-      <span className="absolute inset-0 -z-10 rounded-full bg-[#25D366] opacity-40 motion-safe:animate-ping" />
       <WhatsAppIcon className="h-7 w-7" />
     </motion.a>
   )
