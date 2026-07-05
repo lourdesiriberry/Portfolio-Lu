@@ -87,13 +87,20 @@ En su lugar:
 - Cambios incrementales, sección por sección. Mostrar resultado y ajustar.
 - Después de cada sección, correr el dev server y revisar en mobile (responsive).
 
-## Estado actual del proyecto (actualizado 2026-06-20)
-**Sitio COMPLETO y DESPLEGADO.** Todas las secciones armadas: Hero (logos 3D), Qué hago,
-Números (contador animado), Mi trabajo, Servicios (con precios visibles), Contacto. + Navbar y Footer.
+## Estado actual del proyecto (actualizado 2026-07-04)
+**Sitio COMPLETO y DESPLEGADO.** Documentación a fondo en la raíz: **`SOBRE-EL-SITIO.md`**
+(funcional) y **`BITACORA-TECNICA.md`** (técnico + historial de decisiones). Leerlos primero.
+
+Secciones: Hero, ¿Cómo puedo ayudarte?, Resultados, Proyectos, Planes, Hablemos + Navbar,
+Footer y botón flotante de WhatsApp. Menú: Cómo te ayudo · Resultados · Proyectos · Planes · Hablemos.
 
 - **Online**: **https://redesconlu.com.ar** (dominio propio, conectado a Netlify) — también responde `https://redesconlu.netlify.app`. Deploy automático en cada `push` a `main`.
 - **Repo**: github.com/lourdesiriberry/Portfolio-Lu
-- **Tema visual**: **CLARO con tintes pastel**.
+- **3D del hero**: se probó Three.js/React Three Fiber y **se ELIMINÓ por performance en mobile**.
+  Hoy son íconos SVG chiquitos (IG/TikTok/crecimiento) animados en 3D **por CSS** (`HeroIcons.tsx`).
+  La performance mobile (iOS Safari) es PRIORIDAD: evitar libs 3D, `background-attachment: fixed`,
+  `backdrop-filter` masivo y animar `blur` grande. Ver `BITACORA-TECNICA.md` §6.
+- **Tema visual**: **CLARO** con paleta vibrante de Lu (rosa #FE688E / celeste #C4E6FF / amarillo #FFF48A).
   - Para volver a OSCURO o armar un toggle **dark/light**: el commit **`a33f570`** pasó de
     oscuro → claro. Su **padre `8cfd2fe`** es el estado OSCURO con la paleta de Lu (referencia
     de cómo se veía en oscuro). `git diff 8cfd2fe a33f570` muestra EXACTO el cambio dark→light
