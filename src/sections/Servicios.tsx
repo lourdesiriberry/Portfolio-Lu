@@ -36,7 +36,7 @@ export default function Servicios() {
           </ul>
         </Reveal>
 
-        <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-4">
           {services.map((service, i) => (
             <motion.div
               key={service.name}
