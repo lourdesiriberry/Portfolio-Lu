@@ -15,6 +15,20 @@ export type Service = {
 // Servicios / packs. NO hay pago online: el precio es informativo y el CTA abre WhatsApp.
 export const services: Service[] = [
   {
+    name: 'Arrancá',
+    tagline: 'Para quienes buscan arrancar con una estrategia profesional.',
+    price: '$200.000',
+    priceNote: 'por mes',
+    features: [
+      'Estrategia y plan de contenido mensual',
+      '4 posteos al mes (reels, carruseles y estáticos)',
+      'Réplica en stories',
+      '1 visita mensual para crear contenido real',
+      'Copy con tu voz',
+    ],
+    whatsappMessage: 'Hola Lu! Me interesa el plan Arrancá. ¿Cómo seguimos? 😊',
+  },
+  {
     name: 'Despegá',
     tagline: 'Para tener presencia con una estrategia profesional.',
     price: '$300.000',

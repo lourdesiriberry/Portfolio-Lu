@@ -24,8 +24,8 @@ export const works: Work[] = [
       'Tres generaciones juntas: mi abuelo, mi hija y yo. Momentos reales que enamoran y un fenómeno en TikTok.',
     url: 'https://www.instagram.com/luybetito/',
     metrics: [
-      { platform: 'TikTok', count: '134K' },
-      { platform: 'Instagram', count: '34.2K' },
+      { platform: 'TikTok', count: '141K' },
+      { platform: 'Instagram', count: '42.4K' },
     ],
     featured: true,
   },
@@ -35,8 +35,8 @@ export const works: Work[] = [
     description: 'Mamá e hija. Contenido real, risas y mucho amor 💖',
     url: 'https://www.instagram.com/cayeyluli/',
     metrics: [
-      { platform: 'TikTok', count: '12.3K' },
-      { platform: 'Instagram', count: '4.3K' },
+      { platform: 'TikTok', count: '16K' },
+      { platform: 'Instagram', count: '6.5K' },
     ],
   },
   {
@@ -45,7 +45,7 @@ export const works: Work[] = [
     description:
       'Comunicación del colegio: contenido que conecta con toda la comunidad educativa.',
     url: 'https://www.instagram.com/stmichaelscollegeadrogue',
-    metrics: [{ platform: 'Instagram', count: '3.5K' }],
+    metrics: [{ platform: 'Instagram', count: '4K' }],
   },
   {
     name: 'Ecot Siderúrgicos',
@@ -53,6 +53,6 @@ export const works: Work[] = [
     description:
       'Todo para la construcción: chapas, hierros y caños. Comunicación clara y profesional para llegar a más clientes.',
     url: 'https://www.instagram.com/ecotsiderurgicos/',
-    metrics: [{ platform: 'Instagram', count: '1.8K' }],
+    metrics: [{ platform: 'Instagram', count: '2K' }],
   },
 ]
